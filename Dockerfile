@@ -1,5 +1,8 @@
-FROM ubuntu:latest
+FROM nginx:latest
 
 LABEL maintaner="Felipe Carvalho <felipee_sc@hotmail.com>"
 
-CMD ["CMD comando variavel aceita parametro, final do entrypoint tiver exec '$@' aceita CMD.. "]
+COPY teste /usr/share/nginx/html
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["nginx", "-g", "daemon off;"]

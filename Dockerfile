@@ -1,4 +1,5 @@
 FROM ubuntu:latest
 
-ENTRYPOINT ["echo", " ENTRYPOINT Comando Fixo"]
-CMD ["CMD comando variavel aceita parametro"]
+LABEL maintaner="Felipe Carvalho <felipee_sc@hotmail.com>"
+
+CMD ["CMD comando variavel aceita parametro, final do entrypoint tiver exec '$@' aceita CMD.. "]
